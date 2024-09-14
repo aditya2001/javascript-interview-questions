@@ -42,7 +42,9 @@ let student = {
 ```
 
 ## 4. What is a callback function in JavaScript?
-callback is a function that is passed as an argument to another function.
+Callback is a function that is passed as an argument to another function.
+Callbacks allow you to continue executing code, while operation is being executed in the background. Once the operation is completed callback is called.This was we can ensure program remains responsive and user experience is not impacted. 
+
 ```java 
 // Define a function that takes a callback as an argument
 const calculate = (a, b, operation) => {
@@ -60,4 +62,4 @@ const addition = (a,b) => {
 console.log(calculate(5, 4, addition));
 ```
 
-## 5. 
+## 5. Difference between var, let and constant in JavaScript?
