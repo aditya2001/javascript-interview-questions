@@ -44,13 +44,18 @@ let student = {
 ## 4. What is a callback function in JavaScript?
 callback is a function that is passed as an argument to another function.
 ```java 
+// Define a function that takes a callback as an argument
 const calculate = (a, b, operation) => {
-    console.log("Result is");
-    return operation(a,b);
-        }
-const substraction = (a,b) => {
-         a-b;
-        }
-
-calculate(5, 4, substraction);
+        console.log("Result is");
+   return operation(a,b);
+}
+// Define a callback function that takes two arguments
+        const substraction = (a,b) => {
+        return a-b;
+}
+// Define a callback function that takes two arguments
+        const addition = (a,b) => {
+        return a+b;
+}
+        console.log(calculate(5, 4, addition));
 ```
