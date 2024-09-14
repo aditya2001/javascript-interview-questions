@@ -63,3 +63,30 @@ console.log(calculate(5, 4, addition));
 ```
 
 ## 5. Difference between var, let and constant in JavaScript?
+In JavaScript type of variables is decided at run time.
+
+| var              | let                   | const                                    | 
+|------------------|-----------------------|------------------------------------------| 
+| `used initially` | `let has block scope` | `used when we want the value to be same` |
+
+var -> can sometime produce undesirable results.
+
+Function Scope -> Scope is the boundary represented by {}. There are 2 types of blocks function block and normal block.
+
+1. Function Block {} we provide immediately after function declaration.
+
+```java 
+function add (){
+console.log("print");
+}
+```
+
+2. Normal block {} - is used with if or for loops.
+```java 
+if(true){
+}
+```
+
+## 6. Why is let used instead of var now?
+Problem with function scope of car is , sometimes we want to access information only inside normal block, but with var is it exposed outside normal block and accessible for the entire function.
+This could give undesirable results. let and const are block scoped.
