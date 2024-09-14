@@ -20,23 +20,37 @@ foo = true; // foo is now a boolean
 
 ### Primitive Data Types ->
 
-| DataType    | Description                | Examples                                             | 
-|-------------|----------------------------|------------------------------------------------------| 
-| `String`    | `Text data`                | `'hello', "hello world!", etc.`                      |
-| `Number`    | `Integer`                  | `3, 3.234, 3e-2, etc.`                               | 
-| `BigInt`    | `Integer`                  |                                                      | 
-| `Boolean`   | `true or false`            | `true or false;`                                     | 
-| `Undefined` | `variable not initialized` | `let a;`                                             |
-| `Null`      | `null value`               | `	let a = null;` | 
-| `Symbol`    | `Float`                    |                                                      | 
+| DataType    | Description                   | Examples                        | 
+|-------------|-------------------------------|---------------------------------| 
+| `String`    | `Sequence of characters`      | `'hello', "hello world!", etc.` |
+| `Number`    | `Integer`                     | `3, 3.234, 3e-2, etc.`          | 
+| `BigInt`    | `Integer`                     |                                 | 
+| `Boolean`   | `true or false`               | `true or false;`                | 
+| `Undefined` | `variable not initialized`    | `let a;`                        |
+| `Null`      | `null represents empty value` | `	let a = null;`                | 
+| `Symbol`    |                               |                                 | 
 
 ### Non Primitive Data Types ->
  JavaScript Object -> An Object holds data in the form of key-value pairs. For example,
-
+JavaScript object ae written with curly braces {}. Object properties are written as name:value pairs.
 ```java 
 let student = {
  firstName: "John",
  lastName: null,
  class: 10
  };
+```
+
+## 4. What is a callback function in JavaScript?
+callback is a function that is passed as an argument to another function.
+```java 
+const calculate = (a, b, operation) => {
+    console.log("Result is");
+    return operation(a,b);
+        }
+const substraction = (a,b) => {
+         a-b;
+        }
+
+calculate(5, 4, substraction);
 ```
