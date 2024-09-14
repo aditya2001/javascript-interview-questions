@@ -50,12 +50,14 @@ const calculate = (a, b, operation) => {
    return operation(a,b);
 }
 // Define a callback function that takes two arguments
-        const substraction = (a,b) => {
-        return a-b;
+const substraction = (a,b) => {
+    return a-b;
 }
 // Define a callback function that takes two arguments
-        const addition = (a,b) => {
-        return a+b;
+const addition = (a,b) => {
+    return a+b;
 }
-        console.log(calculate(5, 4, addition));
+console.log(calculate(5, 4, addition));
 ```
+
+## 5. 
