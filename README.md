@@ -88,5 +88,5 @@ if(true){
 ```
 
 ## 6. Why is let used instead of var now?
-Problem with function scope of car is , sometimes we want to access information only inside normal block, but with var is it exposed outside normal block and accessible for the entire function.
+Problem with function scope of var is , sometimes we want to access information only inside normal block, but with var is it exposed outside normal block and accessible for the entire function.
 This could give undesirable results. let and const are block scoped.
