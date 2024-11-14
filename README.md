@@ -47,16 +47,16 @@ Callbacks allow you to continue executing code, while operation is being execute
 
 ```java 
 // Define a function that takes a callback as an argument
-const calculate = (a, b, operation) => {
-        console.log("Result is");
-   return operation(a,b);
+function calculate(a, b, operation){
+    console.log("Perform operation")
+    return operation(a,b);
 }
 // Define a callback function that takes two arguments
 const substraction = (a,b) => {
     return a-b;
 }
 // Define a callback function that takes two arguments
-const addition = (a,b) => {
+function addition(a, b){
     return a+b;
 }
 console.log(calculate(5, 4, addition));
