@@ -62,6 +62,26 @@ const addition = (a,b) => {
 console.log(calculate(5, 4, addition));
 ```
 
+## 5. Why use callback in automated testing?
+When writing automated tests, especially for web applications, you often encounter asynchronous operations like waiting for elements to load or interacting with APIs. Callback functions help you manage these asynchronous tasks efficiently, ensuring that your test steps execute in the correct order..
+
+```java
+function findElement(driver, locator, callback) {
+    driver.wait(until.elementLocated(locator), 10000).then(() => {
+        driver.findElement(locator).then((element) => {
+            callback(element);
+        });
+    });
+}
+
+function click(element){
+     element.click().then(() => {
+            console.log('Element clicked successfully.');
+        });
+}
+
+findElement(driver, locator, click);
+
 ## 5. Difference between var, let and constant in JavaScript?
 In JavaScript type of variables is decided at run time.
 
