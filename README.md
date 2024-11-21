@@ -270,6 +270,7 @@ console.log('Promise created, waiting for resolution...');
 3. API Calls: When fetching data from servers, the response time can vary. Asynchronous operations prevent the application from freezing while waiting for responses.
 4. Parallel Operations: Asynchronous programming allows multiple operations to be initiated simultaneously, potentially reducing overall execution time.
 
+**The Promise object takes a callback function as a parameter, which, in turn, takes two parameters, resolve and reject**
 
 ```java
 
