@@ -269,3 +269,27 @@ console.log('Promise created, waiting for resolution...');
 2. Responsiveness: Asynchronous operations allow the UI to remain responsive while waiting for data or processing to complete.
 3. API Calls: When fetching data from servers, the response time can vary. Asynchronous operations prevent the application from freezing while waiting for responses.
 4. Parallel Operations: Asynchronous programming allows multiple operations to be initiated simultaneously, potentially reducing overall execution time.
+
+
+```java
+
+function parseXls(filepath) {
+  return new Promise((resolve, reject) => {
+      if (filepath != null) {
+        const jsonData = xlsx.parse(fs.readFileSync(filepath));
+        resolve(jsonData);
+      } else {
+        reject(new Error('File not found'));
+      }
+  });
+}
+
+cy.parseXls(fielpath)
+  .then(jsonData => {
+   cy.log(jsonData);
+  })
+  .catch((error) => {
+    console.error('Error:', error.message);
+  })
+
+```
