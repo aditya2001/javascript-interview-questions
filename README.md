@@ -177,3 +177,95 @@ formatData(userData);
 ```
 
 ## 9. Promises in javascript?
+
+Promise is an object in java script that will produce a value in future.
+This usually applied to asynchronous operation. Instead of blocking code execution until data loads, you can define them as promised, so that code execution conitnues
+with other parts of the code.It’s a way to handle asynchronous operations more elegantly than callbacks, allowing for better chaining and error handling.
+
+When promise completes, you can use data, in some cases promises pass and some cases it fails.
+Promises were introduced to solve the problems associated with callback hell and to provide a more structured way of handling asynchronous operations.
+Promise has 3 states -
+
+1. Pending
+2. Fulfilled - Promise resolves and returns a value
+3. Rejected - Promise fails with an error.
+
+When promise is fulfilled, you can access resolved data in the then method of the promise.
+
+Promise.the(value => {
+
+})
+
+It is also possible that then method can return another promise, so you can chain another then method.
+
+#### When promise is rejected-
+When a promise is rejeted, you can access the error information returned in the catch method of the promise.
+Think of catch as this doesnot so I catch the error, so that it doesnot break the application.
+
+
+Promises are consumed using the .then(), .catch(), and .finally() methods:
+
+
+```java
+Promise.then(data => {
+   dataIsLoading = false;
+})
+.catch( error => {
+dataIsLoading = false;
+
+})
+.finally( ()=> {
+    dataLoading = false;
+})
+```
+
+```java
+fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+console.log("This runs immediately, without waiting for the fetch to complete");
+```
+
+## 10. Advantages of Promise?
+1. Better readability: Promises allow for a more linear and readable code structure.
+2. Better error handling: Promises have a standardized way to handle errors using .catch().
+3. Chaining: Promises can be easily chained for sequential asynchronous operations.
+
+```java
+
+function fetchUserData(userId) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (userId === 123) {
+        const user = { id: 123, name: 'John Doe', email: 'john@example.com' };
+        resolve(user);
+      } else {
+        reject(new Error('User not found'));
+      }
+    }, 2000);
+  });
+}
+
+console.log('Fetching user data...');
+
+fetchUserData(123)
+  .then((user) => {
+    console.log('User data:', user);
+  })
+  .catch((error) => {
+    console.error('Error:', error.message);
+  })
+  .finally(() => {
+    console.log('Operation completed');
+  });
+
+console.log('Promise created, waiting for resolution...');
+```
+
+### 11. Why do we need to manage asynchronous operations?
+1. Multitasking: Users can interact with other parts of the application while waiting for certain operations to finish.
+2. Responsiveness: Asynchronous operations allow the UI to remain responsive while waiting for data or processing to complete.
+3. API Calls: When fetching data from servers, the response time can vary. Asynchronous operations prevent the application from freezing while waiting for responses.
+4. Parallel Operations: Asynchronous programming allows multiple operations to be initiated simultaneously, potentially reducing overall execution time.
