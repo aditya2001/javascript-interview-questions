@@ -110,3 +110,70 @@ if(true){
 ## 6. Why is let used instead of var now?
 Problem with function scope of var is , sometimes we want to access information only inside normal block, but with var is it exposed outside normal block and accessible for the entire function.
 This could give undesirable results. let and const are block scoped.
+
+
+## 7. Map() method of array?
+map() method creates a new array populated with the results of callback method applied on every array element.
+
+```java
+
+let arr = [3, 4, 5, 6];
+let modifiedArr = arr.map(function(element){
+    return element *3;
+});
+
+modifiedArr; // [9, 12, 15, 18]
+
+```
+
+1. map does not change original array.
+2. map() creates a new array from calling a function for every array element.
+
+
+## 8. forEach() method of array?
+The forEach() method is passed a callback function as an argument for each element in an array.
+
+```java
+
+const items = [12, 24, 36];
+const copy = [];
+
+items.forEach(function (item) {
+    copy.push(item);
+});
+
+console.log(copy);
+
+```
+
+```java
+
+let userData = [
+    {
+    displayname: "phone",
+    quantity: 1
+    },
+    {
+    displayname: "notebook",
+    quantity: 2
+    }
+];
+
+
+function formatData(userData){
+    const result =[];
+
+    userData.forEach(function(item){
+        result.push({
+         label: item.displayname,
+         value: item.quantity
+        });
+    })
+    console.log(result);
+}
+
+formatData(userData);
+ 
+```
+
+## 9. Promises in javascript?
